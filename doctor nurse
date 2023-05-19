@@ -1,0 +1,36 @@
+CREATE TABLE DOCTOR (
+	DOC_ID INT(4) NOT NULL,
+    DEPTNAME CHAR(10) CHECK (DEPTNAME IN ('정형외과', '피부과', '이비인후과', '산부인과', '소아과')),
+    SEX CHAR(1) CHECK (SEX IN ('F', 'M')),
+    PHONENUM CHAR(15),
+    TITLE CHAR(5) CHECK (TITLE IN ('원장', '페이닥터')),
+    NAME CHAR(10),
+    EMAIL CHAR(20),
+    PRIMARY KEY(DOC_ID)
+    );
+    
+INSERT INTO DOCTOR  VALUES (1101, '정형외과', 'F', '010-1234-5678', '원장', '김의사', 'kimdoc@example.com');
+INSERT INTO DOCTOR  VALUES (1201, '피부과', 'M', '010-9876-5432', '페이닥터', '이의사', 'leedoc@example.com');
+INSERT INTO DOCTOR  VALUES (1301, '이비인후과', 'F', '010-4567-8901', '페이닥터', '박의사', 'parkdoc@example.com');
+INSERT INTO DOCTOR  VALUES (1401, '산부인과','F', '010-2468-1357', '페이닥터', '최의사', 'choidoc@example.com');
+INSERT INTO DOCTOR  VALUES (1501, '소아과', 'M', '010-7531-0864', '페이닥터', '정의사', 'jungdoc@example.com');
+
+CREATE TABLE NURSE (
+	NURSE_ID INT(4) NOT NULL,
+    DEPTNAME CHAR(10) CHECK (DEPTNAME IN ('정형외과', '피부과', '이비인후과', '산부인과', '소아과')),
+    SEX CHAR(1) CHECK (SEX IN ('F', 'M')),
+    PHONENUM CHAR(15),
+    TITLE CHAR(5) CHECK (TITLE IN ('수간호사', '책임간호사', '평간호사')),
+    NAME CHAR(10),
+    EMAIL CHAR(20),
+    TASK CHAR(10) CHECK (TASK IN ('진료접수', '환자관리', '차트관리')),
+    PRIMARY KEY(NURSE_ID)
+    );
+    
+    
+INSERT INTO NURSE  VALUES (2101, '정형외과', 'M', '010-6543-2109', '수간호사', '김간호사', 'kimnurse@ex.com', '차트관리');
+INSERT INTO NURSE  VALUES (2201, '피부과', 'F', '010-2109-8765', '책임간호사', '이간호사', 'leenurse@ex.com', '진료접수');
+INSERT INTO NURSE  VALUES (2301, '이비인후과', 'F', '010-6789-4321', '평간호사', '박간호사', 'parknurse@ex.com', '환자관리');
+INSERT INTO NURSE  VALUES (2401, '산부인과','M', '010-5432-1098', '책임간호사', '최간호사', 'choinurse@ex.com', '진료접수');
+INSERT INTO NURSE  VALUES (2501, '소아과', 'F', '010-8912-3456', '평간호사', '정간호사', 'jungnurse@ex.com', '환자관리');
+
