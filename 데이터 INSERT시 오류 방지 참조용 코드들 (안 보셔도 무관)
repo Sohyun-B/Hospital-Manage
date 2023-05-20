@@ -1,0 +1,51 @@
+/* 주민등록번호 중복 찾기 */
+/*
+SELECT SOCIALNUM, COUNT(*) AS COUNT
+FROM PATIENT
+GROUP BY SOCIALNUM
+HAVING COUNT > 1;
+*/
+
+/* 남자인데 뒷자리 짝수로 시작 OR 여자인데 뒷자리 홀수로 시작 */
+/*
+SELECT *
+FROM PATIENT
+WHERE (SUBSTRING(SOCIALNUM, 8, 1) % 2 = 0 AND SEX = 'M')
+   OR (SUBSTRING(SOCIALNUM, 8, 1) % 2 = 1 AND SEX = 'F');
+*/
+
+/*전화번호 중복*/
+/*
+SELECT PHONENUM, COUNT(*) AS DuplicateCount
+FROM PATIENT
+GROUP BY PHONENUM
+HAVING COUNT(*) > 1;
+*/
+
+/*의사와 간호사의 과가 다른 환자 찾는 코드*/
+/*
+SELECT *
+FROM PATIENT
+WHERE SUBSTRING(DOC_ID, 2, 1) <> SUBSTRING(NURSE_ID, 2, 1);
+*/
+
+/*출생년도와 주민등록번호 뒷자리가 안 맞는 사람, 주민등록번호 첫자리가 23이하로 시작하면 2000년대생으로 간주*/
+/*
+SELECT *
+FROM PATIENT
+WHERE 
+  (SUBSTRING(SOCIALNUM, 1, 2) <= 23 AND SUBSTRING(SOCIALNUM, 8, 2) <= 3) OR
+	(SUBSTRING(SOCIALNUM, 1, 2) > 23 AND SUBSTRING(SOCIALNUM, 8, 2)  > 2);
+*/
+
+/*이름은 겹쳐도 되긴 하지만 너무 많은 동일한 이름이 있는지 확인용*/
+/*
+SELECT *
+FROM PATIENT
+WHERE NAME IN (
+    SELECT NAME
+    FROM PATIENT
+    GROUP BY NAME
+    HAVING COUNT(*) > 1
+);
+*/
