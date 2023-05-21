@@ -6,7 +6,7 @@ INSERT INTO PATIENT VALUES (30105, 'F', '010512-4231561', '대전시 서구', '0
 INSERT INTO PATIENT VALUES (30106, 'M', '040907-3141153', '광주시 동구', '010-7531-0864', '학생', '이상호', 'sangho0501@gmail.com', 1501, 2501);
 INSERT INTO PATIENT VALUES (30107, 'F', '950630-2145182', '울산시 남구', '010-8232-2844', '피아니스트', '최혜원', 'hyewon0501@gmail.com', 1301, 2301);
 INSERT INTO PATIENT VALUES (30108, 'M', '900811-1251871', '서울시 강서구', '010-3522-1098', '연구원', '강준호', 'junho0501@gmail.com', 1101, 2101);
-INSERT INTO PATIENT VALUES (30109, 'F', '920225-2254893', '서울시 영둥포구', '010-9929-4721', '군인', '홍수미', 'sumi0501@gmail.com', 1201, 2201);
+INSERT INTO PATIENT VALUES (30109, 'F', '920225-2254893', '서울시 영등포구', '010-9929-4721', '군인', '홍수미', 'sumi0501@gmail.com', 1201, 2201);
 
 INSERT INTO PATIENT VALUES (30201, 'F', '940519-2124682', '수원시 권선구', '010-4321-2234', '회사원', '이지현', 'jihyun0502@gmail.com', 1101, 2101);
 INSERT INTO PATIENT VALUES (30202, 'M', '130226-3195237', '서울시 강남구', '010-9976-9932', '학생', '박준영', 'junyoung0502@gmail.com', 1501, 2501);
