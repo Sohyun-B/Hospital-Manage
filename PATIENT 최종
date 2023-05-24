@@ -1,5 +1,5 @@
 INSERT INTO PATIENT VALUES (30101, 'F', '950123-2138716', '서울시 종로구', '010-6821-2234', '변호사', '김소정', 'sojung0501@gmail.com', 1101, 2101);
-INSERT INTO PATIENT VALUES (30102, 'M', '940218-1119372', '부산시 해운대구', '010-2486-5232', '회사원', '이민호', 'minho0501@gmail.com', 1201, 2201);
+INSERT INTO PATIENT VALUES (30102, 'M', '940218-1119372', '부산시 해운대구', '010-2486-5232', '회사원', '이영호', 'minho0501@gmail.com', 1201, 2201);
 INSERT INTO PATIENT VALUES (30103, 'F', '891104-2128119', '대구시 동구', '010-4354-5358', '간호사', '박지영', 'jiyoung0501@gmail.com', 1401, 2401);
 INSERT INTO PATIENT VALUES (30104, 'M', '980320-1181257', '인천시 남구', '010-3493-8901', '자영업', '정태호', 'taeho0501@gmail.com', 1301, 2301);
 INSERT INTO PATIENT VALUES (30105, 'F', '010512-4231561', '대전시 서구', '010-2121-8357', '학생', '류민지', 'minji0501@gmail.com', 1501, 2501);
