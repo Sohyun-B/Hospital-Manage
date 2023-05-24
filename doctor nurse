@@ -6,6 +6,7 @@ CREATE TABLE DOCTOR (
     TITLE CHAR(5) CHECK (TITLE IN ('원장', '페이닥터')),
     NAME CHAR(10),
     EMAIL CHAR(20),
+    FOREIGN KEY(DEPTNAME) REFERENCES DEPTNAME(DEPARTMENT),
     PRIMARY KEY(DOC_ID)
     );
     
@@ -17,13 +18,14 @@ INSERT INTO DOCTOR  VALUES (1501, '소아과', 'M', '010-7531-0864', '페이닥�
 
 CREATE TABLE NURSE (
 	NURSE_ID INT(4) NOT NULL,
-    DEPTNAME CHAR(10) CHECK (DEPTNAME IN ('정형외과', '피부과', '이비인후과', '산부인과', '소아과')),
+    DEPTNAME CHAR(10),
     SEX CHAR(1) CHECK (SEX IN ('F', 'M')),
     PHONENUM CHAR(15),
     TITLE CHAR(5) CHECK (TITLE IN ('수간호사', '책임간호사', '평간호사')),
     NAME CHAR(10),
     EMAIL CHAR(20),
-    TASK CHAR(10) CHECK (TASK IN ('진료접수', '환자관리', '차트관리')),
+    TASK CHAR(10),
+    FOREIGN KEY(DEPTNAME) REFERENCES DEPTNAME(DEPARTMENT),
     FOREIGN KEY(TASK) REFERENCES NUR_TASK(NURSE_TASK),
     PRIMARY KEY(NURSE_ID)
     );
