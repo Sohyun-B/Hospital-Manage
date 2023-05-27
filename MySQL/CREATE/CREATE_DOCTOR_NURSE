@@ -1,6 +1,6 @@
 CREATE TABLE DOCTOR (
 	DOC_ID INT(4) NOT NULL,
-    DEPTNAME CHAR(10) CHECK (DEPTNAME IN ('정형외과', '피부과', '이비인후과', '산부인과', '소아과')),
+    DEPTNAME CHAR(10),
     SEX CHAR(1) CHECK (SEX IN ('F', 'M')),
     PHONENUM CHAR(15),
     TITLE CHAR(5),
