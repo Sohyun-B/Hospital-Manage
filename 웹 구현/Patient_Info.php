@@ -11,7 +11,7 @@
         </form>
 
         <?php
-        $conn = mysqli_connect("localhost", "rose", "pRosery20!", "my_db");
+        $conn = mysqli_connect("localhost", "ryuryu", "1234", "hospital_management");
         if (!$conn) {
             echo "Database connection error";
         } else {
